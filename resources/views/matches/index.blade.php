@@ -11,11 +11,11 @@
 		</tr>
 	</thead>
 	<tbody>
-		@foreach ($matches->teams as $team)
+		@foreach ($matches as $match)
 		<tr>
-			<td>{{ $team->tm_name}}</td>
+			<td>{{ $match->m_homeid}}</td>
 			<td>{{ $matches->m_score}}</td>	//I am not sure whether this will work or not.
-			<td>{{ $team->tm_name}}</td>
+			<td>{{ $match->m_guestid}}</td>
 		</tr>
 	</tbody>
 </table>
