@@ -38,12 +38,12 @@
     <tbody>
     	@foreach ($matches->players as $player)
     	<tr>
-    		<td><a href="{{url('players',$player->id)}}" class="btn btn-primary">{{ $player->p_number }}</a></td>
+    		<td>{{ $player->p_number }}</td>
     		<td>{{ $player->p_fname }}</td>
     		<td>{{ $player->p_lname }}</td>
 			<td><a href="{{url('players',$player->id)}}" class="btn btn-primary">Home player detial</a></td>
 			<td><a href="{{url('players',$player->id)}}" class="btn btn-warning">Guest player detial</a></td>
-			<td><a href="{{url('players',$player->id)}}" class="btn btn-primary">{{ $player->p_number }}</a></td>
+			<td>{{ $player->p_number }}</td>
     		<td>{{ $player->p_fname }}</td>
     		<td>{{ $player->p_lname }}</td>
     	</tr>
