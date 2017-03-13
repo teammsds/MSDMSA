@@ -2,7 +2,7 @@
 <html>
 <h1>Match Detail</h1>
 <h2>Result</h2>
-<table class="table table-striped table-bordered table-hover">
+<table class="table table-striped table-hover">
 	<thead>
 		<tr class="bg-info">
 			<th>Home Team</th>
