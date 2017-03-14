@@ -1,5 +1,5 @@
 body {
-  font-family: 'Lato'; }
+  font-family: 'Lemonada'; }
 
 .fa-btn {
   margin-right: 6px; }
@@ -43,6 +43,13 @@ div.pull-left button {
 
 div.se-highlights {
   padding-top: 10px; }
+
+  div.sidebar {
+    width:80%;
+    display: table-cell;
+    background-color:#BD4538;
+    color:white;
+}
 
 /*# sourceMappingURL=app.css.map */
 
