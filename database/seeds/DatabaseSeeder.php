@@ -26,19 +26,19 @@ class DatabaseSeeder extends Seeder
     }
 }
 
-class TagsTableSeeder extends Seeder {
+// class TagsTableSeeder extends Seeder {
 
-    public function run()
-    {
-        DB::table('tags')->delete();
-        Tag::create([ 'name' => 'Athlete']);
-        Tag::create([ 'name' => 'First Generation']);
-        Tag::create([ 'name' => 'Graduate']);
-        Tag::create([ 'name' => 'International']);
-        Tag::create([ 'name' => 'Military & Veteran']);
-        Tag::create([ 'name' => 'Retention Risk']);
-        Tag::create([ 'name' => 'Scotts Scholar']);
-        Tag::create([ 'name' => 'Undergraduate']);
-    }
-}
+//     public function run()
+//     {
+//         DB::table('tags')->delete();
+//         Tag::create([ 'name' => 'Athlete']);
+//         Tag::create([ 'name' => 'First Generation']);
+//         Tag::create([ 'name' => 'Graduate']);
+//         Tag::create([ 'name' => 'International']);
+//         Tag::create([ 'name' => 'Military & Veteran']);
+//         Tag::create([ 'name' => 'Retention Risk']);
+//         Tag::create([ 'name' => 'Scotts Scholar']);
+//         Tag::create([ 'name' => 'Undergraduate']);
+//     }
+// }
 

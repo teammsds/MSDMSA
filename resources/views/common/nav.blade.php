@@ -22,8 +22,7 @@
             <li><a href="{{action('HomeController@display')}}">About MSA</a></li>
             <li><a href="#">Table</a></li>
             <li><a href="#">Stats</a></li>
-            <li><a href="{{ action('SchoolController@index') }}">School</a></li>
-            <li><a href="{{ action('TeamController@index') }}">Team</a></li>
+            
             </div>
 
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -33,6 +32,8 @@
                 
                 {{-- Menu for Users with Administration Role Only --}}
                 @role('admin')
+                <li><a href="{{ action('SchoolController@index') }}">School</a></li>
+               <li><a href="{{ action('TeamController@index') }}">Team</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                         <i class="fa fa-btn fa-fw fa-cogs"></i>Administration<span class="caret"></span></a>

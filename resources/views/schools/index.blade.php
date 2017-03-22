@@ -1,11 +1,12 @@
 @extends('layouts.app')
-<body>
 
-</body>
 @section('content')
-    <div>
-    <h1>Schools</h1>
-    <h4> Check your school in the List</h4>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-15 col-md-offset-0">
+            <div class="panel panel-default">
+    <h1 style= "color: red">Schools</h1>
+    <h4 style= "color: black"><i> Check your school in the List</i></h4>
     <a href="{{url('/schools/create')}}" class="btn btn-success">Create New School?</a>
     <hr>
     <table class="table table-striped table-bordered table-hover">

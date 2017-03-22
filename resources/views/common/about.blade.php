@@ -6,7 +6,7 @@
         
       <div class="col-md-10 col-md-offset-0">
 
-         <div style= "background-color : #CCCCCC " class="panel panel-default" >
+         <div class="panel panel-default" >
 
 <!--    mission statement
  -->        <i class="fa fa-futbol-o" style="font-size: 30px;color:red;margin-left: 6cm"></i>
@@ -25,7 +25,7 @@
         </div>
 
               
-         <div style= "background-color : #B24C4C " class="panel panel-default" >
+         <div style= "background-color : #CCFBFF " class="panel panel-default" >
          
             <i class="fa fa-futbol-o" style="font-size: 20px;color: white"></i>
             <p1 style ="color: white " > Contact Us: </p1> <br>

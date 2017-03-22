@@ -26,7 +26,7 @@
     <div class="col-md-6 col-md-offset-4">
         <div class="checkbox">
             <label>
-                {{ Form::hidden('active', false) }}{{ Form::checkbox('active', true, old('active')) }} Active
+                {{ Form::hidden('active', false) }}{{ Form::checkbox('active', 1, old('active')) }} Active
             </label>
         </div>
     </div>
