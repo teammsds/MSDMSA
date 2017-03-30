@@ -1,10 +1,14 @@
-@extends('app')
+@extends('layouts.app')
 @section('content')
-    <h1>Create New Team</h1>
+<div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-default">
+<h3> New Team</h3>
     {!! Form::open(['url' => 'teams']) !!}
 
     <div class="form-group">
-        {!! Form::select('id', $schools) !!}
+        {!! Form::select('school_id', $schools) !!}
     </div>
 
     <div class="form-group">
@@ -33,4 +37,9 @@
         {!! Form::submit('Save', ['class' => 'btn btn-primary form-control']) !!}
     </div>
     {!! Form::close() !!}
+    </div>
+    </div>
+    </div>
+    </div>
+
 @stop

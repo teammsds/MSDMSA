@@ -6,12 +6,8 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <div class="pull-right">
-                            <form action="{{ url('roles/create') }}" method="GET">{{ csrf_field() }}
-                                <button type="submit" id="create" class="btn btn-primary"><i class="fa fa-btn fa-file-o"></i>Create</button>
-                            </form>
-                        </div>
-                        <div><h4>{{ $heading }}</h4></div>
+                          <h4 style= "color: black">Roles</h4>
+                          <a href="{{url('/roles/create')}}" class="btn btn-success">Create New Role</a>
                     </div>
                     <div class="panel-body">
                         @if (count($roles) > 0)

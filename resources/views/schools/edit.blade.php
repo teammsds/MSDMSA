@@ -1,6 +1,10 @@
-@extends('app')
+@extends('layouts.app')
 @section('content')
-<h1>Update School</h1>
+<div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-default">
+<h3>Update School</h3>
 {!! Form::model($school,['method' => 'PATCH','route'=>['schools.update',$school->id]]) !!}
 <div class="form-group">
     {!! Form::label('s_name', 'Name:') !!}
@@ -41,6 +45,8 @@
 
 <div class="form-group">
     {!! Form::submit('Update', ['class' => 'btn btn-primary']) !!}
+</div>
+</div>
 </div>
 {!! Form::close() !!}
 @stop

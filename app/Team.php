@@ -14,9 +14,16 @@ class Team extends Model
         'tm_coachphone',
     ];
 
-    public function school()
+    public function schools()
     {
         return $this->belongsTo('App\School');
+    }
+
+    
+    public function players()
+    {
+        return $this->hasMany('App\Player','team_id');
+
     }
     //
 }

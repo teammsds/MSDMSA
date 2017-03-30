@@ -1,8 +1,13 @@
-@extends('app')
+@extends('layouts.app')
 @section('content')
-    <h1>Teams</h1>
-    <h4> Check your team in the List</h4>
-    <a href="{{url('/teams/create')}}" class="btn btn-success">Create New Team?</a>
+<div class="container">
+    <div class="row">
+        <div class="col-md-15 col-md-offset-0">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 style= "color: black">Teams</h4>
+                      <a href="{{url('/teams/create')}}" class="btn btn-success">Add New Team</a>
+                      </div>
     <hr>
     <table class="table table-striped table-bordered table-hover">
         <thead>
@@ -25,7 +30,7 @@
                 <td>{{ $team->tm_coach }}</td>
                 <td>{{ $team->tm_coachemail }}</td>
                 <td>{{ $team->tm_coachphone }}</td>
-                <td><a href="{{url('teams',$team->id)}}" class="btn btn-primary">Read</a></td>
+                <td><a href="{{url('teams',$team->id)}}" class="btn btn-primary">View</a></td>
                 <td><a href="{{route('teams.edit',$team->id)}}" class="btn btn-warning">Update</a></td>
                 <td>
                     {!! Form::open(['method' => 'DELETE', 'route'=>['teams.destroy', $team->id]]) !!}
@@ -38,4 +43,8 @@
         </tbody>
 
     </table>
+    </div>
+        </div>
+    </div>
+</div>
 @endsection

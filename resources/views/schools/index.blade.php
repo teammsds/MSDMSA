@@ -1,13 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+<div class="container">
     <div class="row">
         <div class="col-md-15 col-md-offset-0">
             <div class="panel panel-default">
-    <h1 style= "color: red">Schools</h1>
-    <h4 style= "color: black"><i> Check your school in the List</i></h4>
-    <a href="{{url('/schools/create')}}" class="btn btn-success">Create New School?</a>
+                <div class="panel-heading">
+                    <h4 style= "color: black">Schools</h4>
+                      <a href="{{url('/schools/create')}}" class="btn btn-success">Create New School</a>
+                      </div>
     <hr>
     <table class="table table-striped table-bordered table-hover">
         <thead>
@@ -36,7 +37,7 @@
                 <td>{{ $school->s_contact }}</td>
                 <td>{{ $school->s_email }}</td>
                 <td>{{ $school->s_phone }}</td>
-                <td><a href="{{url('schools',$school->id)}}" class="btn btn-primary">Read</a></td>
+                <td><a href="{{url('schools',$school->id)}}" class="btn btn-primary">View</a></td>
                 <td><a href="{{route('schools.edit',$school->id)}}" class="btn btn-warning">Update</a></td>
                 <td>
                     {!! Form::open(['method' => 'DELETE', 'route'=>['schools.destroy', $school->id]]) !!}
@@ -49,7 +50,10 @@
         </tbody>
 
     </table>
+            </div>
+        </div>
     </div>
+</div>
 @endsection
 
 

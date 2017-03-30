@@ -25,7 +25,7 @@
         body { font-family: 'Lemonada';font-weight: bold;font-color: #FFFFFF; }
         .fa-btn { margin-right: 20px; }
 
-        body {background-color: #17202A  ;}
+        body {background-color: #17202A   ;}
         
     </style>
     <meta name="csrf-token" content="{{ csrf_token() }}"/>
