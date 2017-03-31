@@ -24,7 +24,7 @@
         <tbody>
         @foreach ($teams as $team)
             <tr>
-                <td>{{ $team->school->s_number }}</td>
+                <td>{{ $team->school->s_name }}</td>
                 <td>{{ $team->tm_number }}</td>
                 <td>{{ $team->tm_name }}</td>
                 <td>{{ $team->tm_coach }}</td>
