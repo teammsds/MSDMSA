@@ -25,6 +25,7 @@ Route::get('/', function () {
 Route::resource('schools','SchoolController');
 Route::resource('teams','TeamController');
 Route::resource('players','PlayerController');
+Route::resource('fields','FieldController');
 
 Route::get('php-version', function()
 {

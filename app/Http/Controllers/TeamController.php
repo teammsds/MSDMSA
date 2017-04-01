@@ -29,7 +29,9 @@ class TeamController extends Controller
     public function create()
     {
 
-        $schools = School::lists('id');
+           // $schools = School::lists('s_name','id');
+        $schools = School::lists('s_name','id');
+          
         return view('teams.create', compact('schools'));
     }
 

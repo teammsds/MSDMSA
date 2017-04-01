@@ -12,7 +12,7 @@
     <table class="table table-striped table-bordered table-hover">
         <thead>
         <tr class="bg-info">
-            <th>Player No</th>
+            <th>Player Id</th>
             <th>First Name</th>
             <th>Last Name</th>
             <th>Street</th>
@@ -47,7 +47,7 @@
                 <td><a href="{{url('players',$player->id)}}" class="btn btn-primary">View</a></td>
                 <td><a href="{{route('payers.edit',$player->id)}}" class="btn btn-warning">Update</a></td>
                 <td>
-                    {!! Form::open(['method' => 'DELETE', 'route'=>['players.destroy', $player->id]]) !!}
+                    {!! Form::open(['method' => 'DELETE', 'route'=>['players.destroy', $player->id],'onsubmit' => 'return confirm("Are you sure you want to delete?")']) !!}
                     {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
                     {!! Form::close() !!}
                 </td>

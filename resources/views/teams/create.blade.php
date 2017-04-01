@@ -10,6 +10,7 @@
     <div class="form-group">
         {!! Form::select('school_id', $schools) !!}
     </div>
+    
 
     <div class="form-group">
         {!! Form::label('tm_number', 'Team Number:') !!}
@@ -28,8 +29,8 @@
         {!! Form::text('tm_coachemail',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('team_coachphone', 'Team Coach Phone:') !!}
-        {!! Form::text('team_coachphone',null,['class'=>'form-control']) !!}
+        {!! Form::label('tm_coachphone', 'Team Coach Phone:') !!}
+        {!! Form::text('tm_coachphone',null,['class'=>'form-control']) !!}
     </div>
 
 

@@ -20,7 +20,7 @@ class School extends Model
 
     public function teams()
     {
-        return $this->hasMany('App\Team','school_id');
+        return $this->hasMany('App\Team');
 
     }
 

@@ -12,8 +12,8 @@
     <table class="table table-striped table-bordered table-hover">
         <thead>
         <tr class="bg-info">
-            <th>School Number</th>
-            <th>Team Number</th>
+            <th>School Id</th>
+            <th>Team Id</th>
             <th>Team Name</th>
             <th>Team Coach</th>
             <th>Team Coach E-Mail</th>
@@ -24,7 +24,7 @@
         <tbody>
         @foreach ($teams as $team)
             <tr>
-                <td>{{ $team->school->s_number }}</td>
+                <td>{{ $team->school->s_name }}</td>
                 <td>{{ $team->tm_number }}</td>
                 <td>{{ $team->tm_name }}</td>
                 <td>{{ $team->tm_coach }}</td>
@@ -33,7 +33,7 @@
                 <td><a href="{{url('teams',$team->id)}}" class="btn btn-primary">View</a></td>
                 <td><a href="{{route('teams.edit',$team->id)}}" class="btn btn-warning">Update</a></td>
                 <td>
-                    {!! Form::open(['method' => 'DELETE', 'route'=>['teams.destroy', $team->id]]) !!}
+                    {!! Form::open(['method' => 'DELETE', 'route'=>['teams.destroy', $team->id],'onsubmit' => 'return confirm("Are you sure you want to delete?")']) !!}
                     {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
                     {!! Form::close() !!}
                 </td>

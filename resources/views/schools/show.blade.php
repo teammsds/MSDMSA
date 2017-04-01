@@ -2,7 +2,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+
           <div class="panel panel-default">
           <h3>School Details</h3>
             <table class="table table-striped table-bordered table-hover">
@@ -22,7 +22,7 @@
             </tr>
             <tr>
                 <td>City </td>
-                <td><?php echo ($school['s_city:']); ?></td>
+                <td><?php echo ($school['s_city']); ?></td>
             </tr>
             <tr>
                 <td>State</td>
@@ -50,10 +50,12 @@
          <div>
    <a href="{{url('/schools')}}" class="btn btn-primary">Back</a>
         </div>
+              
 </div>
 </div>
 </div>
-</div>
+
+
 
 
 @stop
