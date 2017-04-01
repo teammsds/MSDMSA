@@ -2,10 +2,12 @@
 @section('content')
 
     <div class="container">
-        <h1 style="color:gainsboro">Team Details</h1>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-default">
+<h3>Team details</h3>
         <table class="table table-bordered table-hover">
-            <tbody style="background-color: darkseagreen">
-            <tr class="bg-info">
+                        <tr class="bg-info">
             <tr>
                 <td>Team Number</td>
                 <td><?php echo ($team['tm_number']); ?></td>
@@ -26,8 +28,16 @@
                 <td>Team Coach Phone</td>
                 <td><?php echo ($team['tm_coachphone']); ?></td>
             </tr>
+            </tr>
             </tbody>
         </table>
+        <div>
+   <a href="{{url('/teams')}}" class="btn btn-primary">Back</a>
+        </div>
     </div>
+
+</div>
+</div>
+</div>
 
 @stop

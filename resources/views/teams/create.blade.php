@@ -10,6 +10,7 @@
     <div class="form-group">
         {!! Form::select('school_id', $schools) !!}
     </div>
+    
 
     <div class="form-group">
         {!! Form::label('tm_number', 'Team Number:') !!}
