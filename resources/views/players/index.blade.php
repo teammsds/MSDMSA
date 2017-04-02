@@ -33,8 +33,8 @@
             <tr>
             
                 <td>{{ $player->p_number }}</td>
-                <td>{{ $player->pl_name }}</td>
-                 <td>{{ $player->pf_name }}</td>
+                <td>{{ $player->p_lname }}</td>
+                 <td>{{ $player->p_fname }}</td>
                 <td>{{ $player->p_street }}</td>
                 <td>{{ $player->p_city }}</td>
                 <td>{{ $player->p_state }}</td>
@@ -45,7 +45,7 @@
                 <td>{{ $player->school->s_number }}</td>
                 <td>{{ $player->team->tm_number }}</td>
                 <td><a href="{{url('players',$player->id)}}" class="btn btn-primary">View</a></td>
-                <td><a href="{{route('payers.edit',$player->id)}}" class="btn btn-warning">Update</a></td>
+                <td><a href="{{route('players.edit',$player->id)}}" class="btn btn-warning">Update</a></td>
                 <td>
                     {!! Form::open(['method' => 'DELETE', 'route'=>['players.destroy', $player->id]]) !!}
                     {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}

@@ -20,6 +20,11 @@ class Team extends Model
         return $this->belongsTo('App\School');
     }
 
+    public function match()
+    {
+        return $this->belongsTo('App\Match');
+
+    }
     
     public function player()
     {

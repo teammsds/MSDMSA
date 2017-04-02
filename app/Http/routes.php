@@ -22,9 +22,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::resource('matches','MatchController');
+Route::resource('tournaments','TournamentController');
 Route::resource('schools','SchoolController');
 Route::resource('teams','TeamController');
 Route::resource('players','PlayerController');
+Route::resource('fouls','FoulController');
+
 
 Route::get('php-version', function()
 {
@@ -54,7 +58,7 @@ Route::get('laravel-version', function()
     Route::get( 'change-password', 'Auth\AuthController@updatePassword');
 
     Route::get('/home', 'HomeController@index');
-    Route::get('/home', 'HomeController@display');
+    Route::get('/about', 'HomeController@display');
     Route::resource('users', 'UsersController');
     Route::resource('roles', 'RolesController');
 

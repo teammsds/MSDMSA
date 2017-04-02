@@ -42,16 +42,16 @@ class Playercontroller extends Controller
     public function store(Request $request)
     {
 
-        $team= new Player($request->all());
-        $team->save();
+        $player= new Player($request->all());
+        $player->save();
 
         return redirect('players');
     }
 
     public function edit($id)
     {
-        $team=Player::find($id);
-        return view('players.edit',compact('team'));
+        $player=Player::find($id);
+        return view('players.edit',compact('player'));
     }
 
     /**
@@ -63,9 +63,9 @@ class Playercontroller extends Controller
     public function update($id,Request $request)
     {
         //
-        $team= new Player($request->all());
-        $team=Player::find($id);
-        $team->update($request->all());
+        $player= new Player($request->all());
+        $player=Player::find($id);
+        $player->update($request->all());
         return redirect('players');
     }
 

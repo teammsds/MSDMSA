@@ -1,68 +1,75 @@
-<!doctype html>
-<html>
-<h1>Match Detail</h1>
-<h2>Result</h2>
-<table class="table table-striped table-hover">
-	<thead>
-		<tr class="bg-info">
-			<th>Home Team</th>
-			<th>Score</th>
-			<th>Guest Team</th>
-		</tr>
-	</thead>
-	<tbody>
-		@foreach ($matches as $match)
-		<tr>
-			<td>{{ $match->m_homeid}}</td>
-			<td>{{ $matches->m_score}}</td>	//I am not sure whether this will work or not.
-			<td>{{ $match->m_guestid}}</td>
-		</tr>
-	</tbody>
-</table>
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <div class="row">
+        <div class="col-md-15 col-md-offset-0">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 style= "color: black">Matches</h4>
+                    @if (Auth::check())
+                        @role('admin')
+                      <a href="{{url('/matches/create')}}" class="btn btn-success">Enter New Match Details</a>
+                        @endrole
+                    @endif
+                      </div>
+    <hr>
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+        <tr class="bg-info">
+            <th>Match Number</th>
+            <th>Home Team ID</th>
+            <th>Guest Team ID</th>
+            <th>Date</th>
+			<th>Time</th>
+            <th>Score</th>
+            <th>Referee Comments</th>
+            <th>Home Team Goals</th>
+            <th>Guest Team Goals</th>
+			<th>Field Name</th>
+			<th>Tournament Name</th>
+            @if (Auth::check())
+                @role('admin')
+            <th colspan="3">Actions</th>
+                @endrole
+            @endif
+        </tr>
+        </thead>
+        <tbody>
+        @foreach ($matches as $match)
+            <tr>
+                <td><a href="{{ action('MatchController@index')}}">{{ $match->m_number }}</a></td>
+                <td>{{ $match->m_homeid}}</td>
+                <td>{{ $match->m_guestid }}</td>
+                <td>{{ $match->m_date }}</td>
+                <td>{{ $match->m_time }}</td>
+                <td>{{ $match->m_score }}</td>
+                <td>{{ $match->m_ref_com }}</td>
+                <td>{{ $match->m_homeg }}</td>
+                <td>{{ $match->m_guestg }}</td>
+				<td>{{ $match->field->f_name }}</td>
+				<td>{{ $match->tournament->to_name }}</td>
+                @if (Auth::check())
+                    @role('admin')
+                <td><a href="{{url('matches',$match->id)}}" class="btn btn-primary">View</a></td>
+                <td><a href="{{route('matches.edit',$match->id)}}" class="btn btn-warning">Update</a></td>
+                <td>
+                    {!! Form::open(['method' => 'DELETE', 'route'=>['matches.destroy', $match->id]]) !!}
+                    {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
+                    {!! Form::close() !!}
+                </td>
+                    @endrole
+                    @endif
+            </tr>
+        @endforeach
+
+        </tbody>
+
+    </table>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
 
 
-<h2>Player</h2>
-<table class="table table-striped table-bordered table-hover">
-    <thead>
-    <tr class="bg-info">
-        <th>Home player No. </th>
-        <th>Player first name </th>
-        <th>Player last name </th>
-        <th colspan="2">Detial </th>
-        <th>Guest player No. </th>
-        <th>Player first name </th>
-        <th>Player last name </th>
-        
-    </tr>
-    </thead>
-    <tbody>
-    	@foreach ($matches->players as $player)
-    	<tr>
-    		<td>{{ $player->p_number }}</td>
-    		<td>{{ $player->p_fname }}</td>
-    		<td>{{ $player->p_lname }}</td>
-			<td><a href="{{url('players',$player->id)}}" class="btn btn-primary">Home player detial</a></td>
-			<td><a href="{{url('players',$player->id)}}" class="btn btn-warning">Guest player detial</a></td>
-			<td>{{ $player->p_number }}</td>
-    		<td>{{ $player->p_fname }}</td>
-    		<td>{{ $player->p_lname }}</td>
-    	</tr>
-    </tbody>
-</table>
-
-
-
-<h2>Other information</h2>
-<table class="table table-striped table-bordered table-hover">
-    <thead>
-    <tr class="bg-info">
-        <th>Referee commonts</th>
-    </tr>
-    </thead>
-    <tbody>
-    	@foreach ($matches as $match)
-    	<tr>
-    		<td>{{ $match->m_ref_com }}</td>
-    	</tr>
-    </tbody>
-</table>

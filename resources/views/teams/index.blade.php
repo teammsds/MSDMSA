@@ -12,7 +12,7 @@
     <table class="table table-striped table-bordered table-hover">
         <thead>
         <tr class="bg-info">
-            <th>School Number</th>
+            <th>School Name</th>
             <th>Team Number</th>
             <th>Team Name</th>
             <th>Team Coach</th>

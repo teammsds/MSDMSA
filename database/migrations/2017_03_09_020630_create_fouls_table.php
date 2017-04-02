@@ -14,6 +14,7 @@ class CreateFoulsTable extends Migration
     {
         {
             Schema::create('fouls', function (Blueprint $table) {
+                $table->increments('id');
                 $table->integer('y_card');
                 $table->integer('r_card');
                 $table->integer('player_id')->unsigned();

@@ -16,11 +16,13 @@ class CreateMatchesTable extends Migration
             Schema::create('matches', function (Blueprint $table) {
                 $table->increments('id');
                 $table->integer('m_number');
-                $table->integer('m_homeid');
-                $table->integer('m_guestid');
+                $table->integer('m_homeid')->unsigned();
+                $table->integer('m_guestid')->unsigned();
                 $table->string('m_time');
                 $table->date('m_date');
                 $table->string('m_score');
+                $table->date('referee1_id')->unsigned();
+                $table->string('referee_2')->unsigned();
                 $table->string('m_ref_com'); //match referee comments
                 $table->integer('m_homeg'); // match home team goals
                 $table->integer('m_guestg');// match guest team goals
@@ -35,6 +37,22 @@ class CreateMatchesTable extends Migration
 
             Schema::table('matches', function (Blueprint $table) {
                 $table->foreign('tournament_id')->references('id')->on('tournaments')->onDelete('cascade');
+            });
+
+            Schema::table('matches', function (Blueprint $table) {
+                $table->foreign('m_homeid')->references('id')->on('teams')->onDelete('cascade');
+            });
+
+            Schema::table('matches', function (Blueprint $table) {
+                $table->foreign('m_guestid')->references('id')->on('teams')->onDelete('cascade');
+            });
+
+            Schema::table('matches', function (Blueprint $table) {
+                $table->foreign('referee1_id')->references('id')->on('referees')->onDelete('cascade');
+            });
+
+            Schema::table('matches', function (Blueprint $table) {
+                $table->foreign('referee2_id')->references('id')->on('referees')->onDelete('cascade');
             });
         }
         //

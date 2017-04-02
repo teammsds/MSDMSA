@@ -11,11 +11,11 @@
                        
         </div>
          <i class="fa fa-futbol-o" style="font-size: 30px;color:red"></i>
-           <a style= "color: white;text-shadow: 2px 2px 4px #000000" href="#" class="glow">Visit ongoing matches</a>
+           <a style= "color: white;text-shadow: 2px 2px 4px #000000" href="{{ action('MatchController@index')}}" class="glow">Visit ongoing matches</a>
            <br>
            <br>
            <i class="fa fa-futbol-o" style="font-size: 30px;color:Green"></i>
-           <a style= "color: white;text-shadow: 2px 2px 4px #000000" href="#" class="glow">Tournament List</a>
+           <a style= "color: white;text-shadow: 2px 2px 4px #000000" href="{{ action('TournamentController@index')}}" class="glow">Tournament List</a>
             <<!-- div class="panel panel-default"> -->
                 <!-- <div class="panel-heading">Missouri Soccer Association ALive and Kickin!!!</div> -->
            <!--   <div style="text-align: left;"><img src="images/soccer.jpg" height="100" width="500"></div> -->

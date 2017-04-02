@@ -17,6 +17,8 @@ class Player extends Model
         'p_email' ,
         'p_phone' ,
         'p_estatus',
+        'team_id',
+        'school_id'
 
     ];
     public function school()
@@ -27,6 +29,12 @@ class Player extends Model
     public function team()
     {
         return $this->belongsTo('App\Team');
+    }
+
+    public function fouls()
+    {
+        return $this->hasMany('App\Foul');
+
     }
     //
 }

@@ -1,68 +1,50 @@
 @extends('layouts.app')
 @section('content')
-<div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-<h3> New Player</h3>
-    {!! Form::open(['url' => 'players']) !!}
-
-    <div class="form-group">
-        {!! Form::select('school_id', $schools) !!}
-    </div>
-    <div class="form-group">
-        {!! Form::select('team_id', $teams) !!}
-    </div>
-
+    <h1>Update Player</h1>
+    {!! Form::model($player,['method' => 'PATCH','route'=>['players.update',$player->id]]) !!}
     <div class="form-group">
         {!! Form::label('p_number', 'Player Number:') !!}
         {!! Form::text('p_number',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('p_fname', 'First Name:') !!}
-        {!! Form::text('p_fname',null,['class'=>'form-control']) !!}
-    </div>
-    <div class="form-group">
-        {!! Form::label('p_lname', 'Last Name:') !!}
+        {!! Form::label('p_lname', 'Player Last Name:') !!}
         {!! Form::text('p_lname',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('p_street', 'Street:') !!}
+        {!! Form::label('p_fname', 'Player First Name:') !!}
+        {!! Form::text('p_fname',null,['class'=>'form-control']) !!}
+    </div>
+    <div class="form-group">
+        {!! Form::label('p_street', 'Player Street Address:') !!}
         {!! Form::text('p_street',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('p_city', 'City:') !!}
+        {!! Form::label('p_city', 'Player City:') !!}
         {!! Form::text('p_city',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('p_state', 'State') !!}
+        {!! Form::label('p_state', 'Player State:') !!}
         {!! Form::text('p_state',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('p_zip', 'Zip') !!}
+        {!! Form::label('p_zip', 'Player Zip Code:') !!}
         {!! Form::text('p_zip',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('p_email', 'E-mail') !!}
+        {!! Form::label('p_email', 'Player Email Address:') !!}
         {!! Form::text('p_email',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('p_phone', 'Phone') !!}
+        {!! Form::label('p_phone', 'Player Phone No:') !!}
         {!! Form::text('p_phone',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('p_estatus', 'Status') !!}
+        {!! Form::label('p_estatus', 'Player Eligibility Status:') !!}
         {!! Form::text('p_estatus',null,['class'=>'form-control']) !!}
     </div>
-    
 
     <div class="form-group">
-        {!! Form::submit('Save', ['class' => 'btn btn-primary form-control']) !!}
+        {!! Form::submit('Update', ['class' => 'btn btn-primary']) !!}
     </div>
     {!! Form::close() !!}
-    </div>
-    </div>
-    </div>
-    </div>
-
 @stop
