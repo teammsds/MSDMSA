@@ -33,6 +33,14 @@
                 <td><?php echo ($match['m_score']); ?></td>
             </tr>
             <tr>
+                <td>Referee 1</td>
+                <td><?php echo ($match['referee1_id']); ?></td>
+            </tr>
+            <tr>
+                <td>Referee 2</td>
+                <td><?php echo ($match['referee2_id']); ?></td>
+            </tr>
+            <tr>
                 <td>Referee Comments</td>
                 <td><?php echo ($match['m_ref_com']); ?></td>
             </tr>

@@ -13,6 +13,8 @@ class Match extends Model
         'm_time',
         'm_date',
         'm_score',
+        'referee1_id',
+        'referee2_id',
         'm_ref_com',
         'm_homeg',
         'm_guestg',
@@ -28,6 +30,11 @@ class Match extends Model
     public function teams()
     {
         return $this->hasMany('App\Team');
+    }
+
+    public function referees()
+    {
+        return $this->hasMany('App\Referee');
     }
 
     public function tournament()

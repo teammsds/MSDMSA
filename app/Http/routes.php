@@ -27,12 +27,12 @@ Route::resource('tournaments','TournamentController');
 Route::resource('schools','SchoolController');
 Route::resource('teams','TeamController');
 Route::resource('players','PlayerController');
-<<<<<<< HEAD
+
 Route::resource('fouls','FoulController');
 
-=======
+
 Route::resource('fields','FieldController');
->>>>>>> 3f49b6cb264037b5f92dbd2c4b5570ec8903b148
+
 
 Route::get('php-version', function()
 {

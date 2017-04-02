@@ -18,6 +18,12 @@
                     <div class="form-group">
                         {!! Form::select('m_guestid', $teams) !!}
                     </div>
+                    <div class="form-group">
+                        {!! Form::select('referee1_id', $referees) !!}
+                    </div>
+                    <div class="form-group">
+                        {!! Form::select('referee2_id', $referees) !!}
+                    </div>
 <div class="form-group">
     {!! Form::label('m_number', 'Match Number:') !!}
     {!! Form::text('m_number',null,['class'=>'form-control']) !!}

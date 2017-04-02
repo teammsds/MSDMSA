@@ -23,6 +23,8 @@
             <th>Date</th>
 			<th>Time</th>
             <th>Score</th>
+            <th>Referee 1</th>
+            <th>Referee 2</th>
             <th>Referee Comments</th>
             <th>Home Team Goals</th>
             <th>Guest Team Goals</th>
@@ -44,6 +46,8 @@
                 <td>{{ $match->m_date }}</td>
                 <td>{{ $match->m_time }}</td>
                 <td>{{ $match->m_score }}</td>
+                <td>{{ $match->referee1_id}}</td>
+                <td>{{ $match->referee2_id }}</td>
                 <td>{{ $match->m_ref_com }}</td>
                 <td>{{ $match->m_homeg }}</td>
                 <td>{{ $match->m_guestg }}</td>
