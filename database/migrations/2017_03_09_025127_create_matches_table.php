@@ -22,7 +22,7 @@ class CreateMatchesTable extends Migration
                 $table->date('m_date');
                 $table->string('m_score');
                 $table->date('referee1_id')->unsigned();
-                $table->string('referee_2')->unsigned();
+                $table->string('referee2_id')->unsigned();
                 $table->string('m_ref_com'); //match referee comments
                 $table->integer('m_homeg'); // match home team goals
                 $table->integer('m_guestg');// match guest team goals
