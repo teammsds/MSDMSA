@@ -7,14 +7,14 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 style= "color: black">Schools</h4>
-                      <a href="{{url('/schools/create')}}" class="btn btn-success">Create New School</a>
+                      <a href="{{url('/schools/create')}}" class="btn btn-success">Add New School</a>
                       </div>
     <hr>
     <table class="table table-striped table-bordered table-hover">
         <thead>
         <tr class="bg-info">
-            <th>Number</th>
             <th>Name</th>
+            <th>School Id</th>
             <th>Street</th>
             <th>City</th>
             <th>State</th>
@@ -40,7 +40,7 @@
                 <td><a href="{{url('schools',$school->id)}}" class="btn btn-primary">View</a></td>
                 <td><a href="{{route('schools.edit',$school->id)}}" class="btn btn-warning">Update</a></td>
                 <td>
-                    {!! Form::open(['method' => 'DELETE', 'route'=>['schools.destroy', $school->id]]) !!}
+                    {!! Form::open(['method' => 'DELETE', 'route'=>['schools.destroy', $school->id],'onsubmit' => 'return confirm("Are you sure you want to delete?")']) !!}
                     {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
                     {!! Form::close() !!}
                 </td>

@@ -1,6 +1,11 @@
-@extends('app')
+@extends('layouts.app')
 @section('content')
-    <h1>Update Team</h1>
+<div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-default">
+<h3>Update Team</h3>
+    
     {!! Form::model($team,['method' => 'PATCH','route'=>['teams.update',$team->id]]) !!}
     <div class="form-group">
         {!! Form::label('tm_number', 'Team Number:') !!}
@@ -27,4 +32,9 @@
         {!! Form::submit('Update', ['class' => 'btn btn-primary']) !!}
     </div>
     {!! Form::close() !!}
+    </div>
+    </div>
+    </div>
+    </div>
+
 @stop

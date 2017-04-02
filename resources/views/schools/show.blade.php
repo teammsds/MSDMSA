@@ -50,31 +50,7 @@
          <div>
    <a href="{{url('/schools')}}" class="btn btn-primary">Back</a>
         </div>
-              <div class="container">
-                  <h1 style="color:gainsboro">School Teams</h1>
-                  <table class="table table-bordered table-hover">
-                      <thead>
-                      <tr class="bg-info">
-                          <th>Team Number</th>
-                          <th>Team Name</th>
-                          <th>Team Coach</th>
-                          <th>Team Coach Email</th>
-                          <th>Team Coach Phone</th>
-                      </tr>
-                      </thead>
-                      <tbody style="background-color:darkseagreen">
-                      @foreach ($school->teams as $team)
-                          <tr>
-                              <td>{{ $team->tm_number }}</td>
-                              <td>{{ $team->tm_name }}</td>
-                              <td>{{ $team->tm_coach }}</td>
-                              <td>{{ $team->tm_coachemail }}</td>
-                              <td>{{ $team->tm_coachphone }}</td>
-                          </tr>
-                      @endforeach
-                      </tbody>
-                  </table>
-              </div>
+              
 </div>
 </div>
 </div>

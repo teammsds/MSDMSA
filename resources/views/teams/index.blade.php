@@ -12,8 +12,13 @@
     <table class="table table-striped table-bordered table-hover">
         <thead>
         <tr class="bg-info">
+<<<<<<< HEAD
             <th>School Name</th>
             <th>Team Number</th>
+=======
+            <th>School Id</th>
+            <th>Team Id</th>
+>>>>>>> 3f49b6cb264037b5f92dbd2c4b5570ec8903b148
             <th>Team Name</th>
             <th>Team Coach</th>
             <th>Team Coach E-Mail</th>
@@ -33,7 +38,7 @@
                 <td><a href="{{url('teams',$team->id)}}" class="btn btn-primary">View</a></td>
                 <td><a href="{{route('teams.edit',$team->id)}}" class="btn btn-warning">Update</a></td>
                 <td>
-                    {!! Form::open(['method' => 'DELETE', 'route'=>['teams.destroy', $team->id]]) !!}
+                    {!! Form::open(['method' => 'DELETE', 'route'=>['teams.destroy', $team->id],'onsubmit' => 'return confirm("Are you sure you want to delete?")']) !!}
                     {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
                     {!! Form::close() !!}
                 </td>

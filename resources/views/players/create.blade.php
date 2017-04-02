@@ -7,15 +7,16 @@
 <h3> New Player</h3>
     {!! Form::open(['url' => 'players']) !!}
 
+    
     <div class="form-group">
-        {!! Form::select('school_id', $schools) !!}
+        {!! Form::select('school_id', $teams) !!}
     </div>
+    
     <div class="form-group">
         {!! Form::select('team_id', $teams) !!}
     </div>
-
     <div class="form-group">
-        {!! Form::label('p_number', 'Player Number:') !!}
+        {!! Form::label('p_number', 'Player Id:') !!}
         {!! Form::text('p_number',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
